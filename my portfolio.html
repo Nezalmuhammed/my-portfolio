@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nezal Muhammed | Creative Designer</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        .neon-border {
+            position: relative;
+        }
+        .neon-border::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.05));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #ffffff, #aaaaaa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hover-glow:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Vanta.js Background -->
+    <div id="vanta-bg" class="fixed top-0 left-0 w-full h-full z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 py-6 px-8 flex justify-between items-center">
+        <div class="text-2xl font-bold text-gradient">NEZAL MUHAMMED</div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a>
+            <a href="#work" class="text-gray-300 hover:text-white transition duration-300">Work</a>
+            <a href="#projects" class="text-gray-300 hover:text-white transition duration-300">Projects</a>
+            <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a>
+        </div>
+        <button class="md:hidden">
+            <i data-feather="menu" class="text-white"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center px-8 z-10">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Nezal <span class="text-gradient">Muhammed</span></h1>
+                <h2 class="text-xl md:text-2xl text-gray-400 mb-8">Creative Designer & Digital Artist</h2>
+                <p class="text-gray-400 mb-10 max-w-lg">Crafting immersive digital experiences through innovative design solutions that blend aesthetics with functionality.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-opacity-90 transition">Hire Me</a>
+                    <a href="#" class="px-8 py-3 border border-white text-white rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition">Download CV</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <div class="relative floating">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden glass-card neon-border">
+                        <img src="C:\Users\Admin\Downloads\WE\my\IMG-20240715-WA0036.jpg" alt="Nezal Muhammed" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 w-24 h-24 rounded-full glass-card neon-border flex items-center justify-center">
+                        <i data-feather="award" class="w-10 h-10 text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 px-8 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center" data-aos="fade-up">My <span class="text-gradient">Expertise</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card neon-border p-8 rounded-xl hover-glow transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center mb-6">
+                        <i data-feather="layout" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="text-gray-400">Creating intuitive interfaces with pixel-perfect precision and seamless user experiences.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card neon-border p-8 rounded-xl hover-glow transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center mb-6">
+                        <i data-feather="code" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <p class="text-gray-400">Building responsive, performant websites with modern technologies and clean code.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card neon-border p-8 rounded-xl hover-glow transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center mb-6">
+                        <i data-feather="smartphone" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">App Design</h3>
+                    <p class="text-gray-400">Designing mobile applications with focus on usability, aesthetics, and brand consistency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-8 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center" data-aos="fade-up">Featured <span class="text-gradient">Projects</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card neon-border rounded-xl overflow-hidden hover-glow transition" data-aos="fade-right">
+                    <div class="h-64 overflow-hidden">
+                        <img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2025-09-06 223710.png" alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">Complete UI/UX redesign for a premium fashion brand.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Web Design</span>
+                            <a href="#" class="text-white hover:text-gray-300 transition">
+                                <i data-feather="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="glass-card neon-border rounded-xl overflow-hidden hover-glow transition" data-aos="fade-left">
+                    <div class="h-64 overflow-hidden">
+                        <img src=c:\Users\Admin\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{4896B8CA-D000-4A71-B23B-16B6013150CA}.png alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Delivery Mobile App</h3>
+                        <p class="text-gray-400 mb-4">Complete app design with custom illustrations and animations.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">App Design</span>
+                            <a href="#" class="text-white hover:text-gray-300 transition">
+                                <i data-feather="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-white text-white rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition">
+                    View All Projects
+                    <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-8 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center" data-aos="fade-up">Get In <span class="text-gradient">Touch</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Let's Work Together</h3>
+                    <p class="text-gray-400 mb-8">Have a project in mind or want to discuss potential collaboration? Feel free to reach out through the form or connect with me on social media.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="w-5 h-5 text-white mr-4"></i>
+                            <span class="text-gray-300">muhammednezal34@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="w-5 h-5 text-white mr-4"></i>
+                            <span class="text-gray-300">WAYANAD - KERALA - INDIA</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-gray-800 transition">
+                            <i data-feather="instagram" class="w-5 h-5 text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-gray-800 transition">
+                            <i data-feather="linkedin" class="w-5 h-5 text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-gray-800 transition">
+                            <i data-feather="dribbble" class="w-5 h-5 text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <form class="glass-card neon-border p-8 rounded-xl">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gray-600">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gray-600">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gray-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-black py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-8 text-center relative z-10">
+        <div class="container mx-auto">
+            <div class="text-2xl font-bold text-gradient mb-4">NEZAL</div>
+            <p class="text-gray-500 mb-8">© 2023 Nezal Muhammed. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-500 hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="text-gray-500 hover:text-white transition">Terms of Service</a>
+                <a href="#" class="text-gray-500 hover:text-white transition">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js background
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3a3a3a,
+            backgroundColor: 0x0a0a0a,
+            size: 0.8
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Floating animation for elements
+        document.querySelectorAll('.floating').forEach(el => {
+            anime({
+                targets: el,
+                translateY: [-10, 10],
+                duration: 3000,
+                direction: 'alternate',
+                loop: true,
+                easing: 'easeInOutSine'
+            });
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
